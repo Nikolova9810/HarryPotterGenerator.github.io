@@ -1,0 +1,359 @@
+@font-face {
+    font-family: HarryPotter;
+    src: url('./Fonts/HARRYP__.TTF');
+}
+
+@font-face {
+    font-family: SofiaSans;
+    src: url('./Fonts/SofiaSans-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: MasonFont;
+    src: url('./Fonts/Mason-bold.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: aliceblue;
+    font-family: SofiaSans;
+    overflow-x: hidden;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 80%;
+    margin: auto;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+}
+
+.character-info {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.character h5 {
+    font-family: MasonFont;
+    opacity: 0.8;
+}
+
+.photo {
+    width: 40%;
+    height: auto;
+
+}
+
+.photo img {
+    width: 100%;
+}
+
+.image-wrapper {
+    width: 50%;
+    height: auto;
+}
+
+.image-hat {
+    width: 100%;
+    height: auto;
+}
+
+.info {
+    font-family: HarryPotter;
+    font-size: 2.5rem;
+}
+
+.red {
+    color: #ae0001;
+}
+
+.yellow {
+    color: #ecb939;
+}
+
+.blue {
+    color: #222f5b;
+}
+
+.green {
+    color: #2a623d;
+
+}
+
+.white {
+    color: aliceblue;
+}
+
+.content {
+    width: 50%;
+}
+
+h1 {
+    font-family: HarryPotter;
+    font-size: 5rem;
+    color: rgb(184, 132, 0);
+    margin-bottom: 20px;
+}
+
+p {
+    max-width: 100ch;
+    line-height: 1.5;
+    opacity: 0.7;
+    margin-bottom: 40px;
+}
+
+/* INPUT */
+
+.group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #757575;
+    color: aliceblue;
+    background: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* LABEL ======================================= */
+label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+input:focus~label,
+input:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color: #5264AE;
+}
+
+
+/* END OF INPUT */
+
+
+/* BUTTON */
+button {
+    position: relative;
+    display: inline-block;
+    padding: 17px 6px;
+    color: rgb(184, 132, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+    background-color: Transparent;
+    border: none;
+    font-family: MasonFont;
+    font-weight: bold;
+
+}
+
+button:hover {
+    background: rgb(184, 132, 0);
+    color: #2c0202;
+    box-shadow: 0 0 5px rgb(239, 210, 124),
+        0 0 25px rgb(239, 210, 124),
+        0 0 50px rgb(239, 210, 124),
+        0 0 200px rgb(239, 210, 124);
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+button:nth-child(1) {
+    filter: hue-rotate(270deg);
+}
+
+button:nth-child(2) {
+    filter: hue-rotate(110deg);
+}
+
+button span {
+    position: absolute;
+    display: block;
+}
+
+button span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgb(184, 132, 0));
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgb(184, 132, 0));
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+button span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, rgb(184, 132, 0));
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+
+button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, rgb(184, 132, 0));
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 512px) {
+
+    .info{
+        font-size: 1.5rem;
+    }
+.character h5{
+    font-size: 1rem;
+}
+
+}
+
+@media screen and (max-width: 992px) {
+    
+    .container {
+        width: 90vw;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 50px;
+        margin-top: 20px;
+    }
+
+    .image-wrapper {
+        width: 80vw;
+    }
+
+    .character-info {
+        width: 100%;
+    }
+
+    .character{
+        text-align: start;
+    }
+
+    .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 3.5rem;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .title {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1193px) {
+    .title {
+        font-size: 3.3rem;
+    }
+}
