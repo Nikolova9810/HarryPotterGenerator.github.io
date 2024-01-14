@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harry Potter Character Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero">
+        <div class="image-wrapper">
+          <img
+            src="./images/sorting-hat-9ab39acf2bd8e6a6ede41263dc84236d.png.webp"
+            class="image-hat character-info"
+            alt="Harry Potter Sorting Hat"
+            width="700"
+            height="500"
+            loading="lazy"
+          />
+        </div>
+        <div class="content">
+          <h1 class="title">Harry Potter <br />Character Generator</h1>
+          <p class="description characteristics">
+            Enter the magical realm by typing in the name of any wizard from the
+            beloved Harry Potter series, and let the magic unfold. Whether it's
+            the Boy Who Lived, the wise Dumbledore, or the cunning Snape, Wizard
+            Insights is your spellbinding source for a wealth of information
+            about these iconic characters.
+          </p>
+          <div class="group">
+            <input type="text" required />
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Enter the name of the character</label>
+          </div>
+          <button class="generate">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Generate Character
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
